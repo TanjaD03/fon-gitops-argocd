@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fon-gitops-api
+  namespace: dev
+  labels:
+    app: fon-gitops-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fon-gitops-api
+  template:
+    metadata:
+      labels:
+        app: fon-gitops-api
+    spec:
+      containers:
+      - name: api
+        image: fon-gitops-api:v1.0.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
