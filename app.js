@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
   res.json({
     status: "success",
     message: "Dobrodosli na FON Cloud GitOps demo aplikaciju!",
-    version: "v1.0.0",
+    version: "v2.0.0",
     author: "Tanja Dumanovic"
   });
 });

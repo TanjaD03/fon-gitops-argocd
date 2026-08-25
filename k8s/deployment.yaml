@@ -6,7 +6,7 @@ metadata:
   labels:
     app: fon-gitops-api
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: fon-gitops-api
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: fon-gitops-api:v1.0.0
+        image: fon-gitops-api:v2.0.0
         imagePullPolicy: Never
         ports:
         - containerPort: 3000
